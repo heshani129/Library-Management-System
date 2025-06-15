@@ -1,0 +1,92 @@
+/* Page Title */
+h2 {
+    color: #222;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form container styled as a card */
+form {
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 30px 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Each form field wrapper */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+/* Field Labels */
+label {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+/* Text and number inputs */
+input[type="text"],
+input[type="number"] {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Input focus effect */
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 6px rgba(74, 144, 226, 0.3);
+    outline: none;
+}
+
+/* Checkbox styling */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+/* Button style */
+button {
+    width: 100%;
+    padding: 12px 0;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #357abd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    form {
+        padding: 20px 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}

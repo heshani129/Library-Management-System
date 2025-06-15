@@ -1,0 +1,34 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { RouterModule, Router } from '@angular/router';
+
+@Component({
+  selector: 'app-add-book',
+  standalone: true,
+  imports: [CommonModule, FormsModule, RouterModule],
+  templateUrl: './add-book.component.html',
+  styleUrls: ['./add-book.component.css']
+})
+export class AddBookComponent {
+  title: string = '';
+  author: string = '';
+  price: number = 0;
+  available: boolean = false;
+  pubID: number = 0;
+
+  constructor(private router: Router) { }
+
+  addBook() {
+    console.log('Book Details:', {
+      title: this.title,
+      author: this.author,
+      price: this.price,
+      available: this.available,
+      pubID: this.pubID
+    });
+
+    alert('Book added successfully!');
+    this.router.navigate(['/books']);
+  }
+}
