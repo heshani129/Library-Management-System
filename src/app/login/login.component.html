@@ -1,0 +1,8 @@
+<div class="login-container">
+    <h2>Library Management System</h2>
+    <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+        <input type="text" placeholder="Username" required [(ngModel)]="username" name="username">
+        <input type="password" placeholder="Password" required [(ngModel)]="password" name="password">
+        <button type="submit">Login</button>
+    </form>
+</div>
