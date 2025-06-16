@@ -17,9 +17,7 @@ export class LoginComponent {
 
   onLogin() {
     if (this.username === 'admin' && this.password === '1234') {
-      alert('Login successful!');
-      // Redirect to dashboard or home page
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/books']);
     } else {
       alert('Invalid username or password.');
     }

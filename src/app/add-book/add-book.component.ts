@@ -30,8 +30,10 @@ export class AddBookComponent {
     };
 
     this.bookService.addBook(newBook);
+    this.router.navigate(['/books']);
+  }
 
-    // After adding, navigate back to book list
+  back() {
     this.router.navigate(['/books']);
   }
 }

@@ -21,6 +21,12 @@ export class BookListComponent {
   goToAddBook() {
     this.router.navigate(['/add-book']);
   }
+  borrowBook() {
+    this.router.navigate(['/borrow-book']);
+  }
+  returnBook() {
+    this.router.navigate(['/return-book']);
+  }
 
 
 }

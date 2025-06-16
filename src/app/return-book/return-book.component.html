@@ -1,0 +1,11 @@
+<h2>Return a Book</h2>
+
+<form (ngSubmit)="returnBook()" #returnForm="ngForm">
+    <input type="number" [(ngModel)]="bookID" name="bookID" required placeholder="Enter Book ID">
+    <button type="submit" [disabled]="returnForm.invalid">Return</button>
+</form>
+
+<h3>Currently Borrowed Books</h3>
+<ul>
+    <li *ngFor="let id of borrowedBooks">Book ID: {{ id }}</li>
+</ul>

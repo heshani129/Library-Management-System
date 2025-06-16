@@ -1,12 +1,12 @@
 <div class="book-list">
     <h2>Book List</h2>
-
+    <button (click)="goToAddBook()">Add Book</button>
+    <button (click)="borrowBook()">Borrow Book</button>
+    <button (click)="returnBook()">Return Book</button>
     <ul>
         <li *ngFor="let book of books">
             <strong>{{ book.title }}</strong> by {{ book.author }} - Rs.{{ book.price }}
             | Available: {{ book.available ? 'Yes' : 'No' }} | PubID: {{ book.pubID }}
         </li>
     </ul>
-
-    <button (click)="goToAddBook()">Add Book</button>
 </div>
