@@ -2,7 +2,10 @@
     <h2>Book List</h2>
 
     <ul>
-        <li *ngFor="let book of books">{{ book }}</li>
+        <li *ngFor="let book of books">
+            <strong>{{ book.title }}</strong> by {{ book.author }} - Rs.{{ book.price }}
+            | Available: {{ book.available ? 'Yes' : 'No' }} | PubID: {{ book.pubID }}
+        </li>
     </ul>
 
     <button (click)="goToAddBook()">Add Book</button>

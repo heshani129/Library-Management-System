@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
+import { Book, BookService } from '../book.service';
 
 @Component({
   selector: 'app-add-book',
@@ -17,18 +18,20 @@ export class AddBookComponent {
   available: boolean = false;
   pubID: number = 0;
 
-  constructor(private router: Router) { }
+  constructor(private bookService: BookService, private router: Router) { }
 
   addBook() {
-    console.log('Book Details:', {
+    const newBook: Book = {
       title: this.title,
       author: this.author,
       price: this.price,
       available: this.available,
       pubID: this.pubID
-    });
+    };
 
-    alert('Book added successfully!');
+    this.bookService.addBook(newBook);
+
+    // After adding, navigate back to book list
     this.router.navigate(['/books']);
   }
 }

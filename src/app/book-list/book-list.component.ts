@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
+import { Book, BookService } from '../book.service';
 
 
 @Component({
@@ -11,10 +12,11 @@ import { RouterModule, Router } from '@angular/router';
 
 })
 export class BookListComponent {
-  books: string[] = ['DBMS Fundamentals', 'Modern Java', 'Web Development'];
-  showAddBook = false;
+  books: Book[];
 
-  constructor(private router: Router) { }
+  constructor(private bookService: BookService, private router: Router) {
+    this.books = this.bookService.getBooks();
+  }
 
   goToAddBook() {
     this.router.navigate(['/add-book']);
